@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/holo_blue_light"
+	android:orientation="vertical">
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:padding="10dp"
+		app:contentPadding="3dp"
+		app:cardElevation="3dp"
+		app:cardCornerRadius="2dp">
+
+		<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/txt_search"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableLeft="@android:drawable/ic_menu_search"
+			android:background="#ffffff"
+			android:hint="@string/hint_search"
+			android:textSize="@dimen/dimen_edittext"
+			android:padding="8dp"
+			android:lines="1"
+			android:maxLines="1"
+			android:inputType="text"
+			android:imeOptions="actionSearch" />
+
+	</androidx.cardview.widget.CardView>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="@android:color/background_light">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/lst_repos"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="gone" />
+
+		<TextView
+			android:id="@+id/lbl_message"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:gravity="center"
+			android:textSize="@dimen/dimen_edittext" />
+
+	</RelativeLayout>
+
+</LinearLayout>
